@@ -1,0 +1,127 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: powderblue;
+}
+
+.wrapper {
+    background-color: powderblue;
+    height: 100%;
+}
+
+.accordion__container {
+    width: 50vw;
+    margin: 0px auto;
+
+}
+
+.accordion__container .accordion__body {
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    line-height: 18px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: color 2s, padding 2s;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.accordion__container .accordion__body {
+    display: flex;
+    justify-content: center;
+}
+
+.accordion__container label {
+    cursor: pointer;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    color: #3109e6;
+    font-weight: 800;
+    box-sizing: border-box;
+    z-index: 100;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    transition: color .35s;
+}
+
+.accordion__container label:hover {
+    color: #000000;
+}
+
+.accordion__container label:hover .accordion__body {
+    display: block;
+}
+
+.accordion__container input {
+    display: none;
+}
+
+.accordion__container label:before {
+    display: none;
+    content: '\276F';
+    float: right;
+}
+
+.accordion__container input:checked+label {
+    color: #000000;
+}
+
+.accordion__container input:checked+label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+
+.accordion__container input:hover+label:before {
+    transition: transform 1s;
+    transform: rotate(90deg);
+}
+
+.accordion__container input:checked+label+.accordion__body {
+    height: auto;
+    margin-top: -5px;
+    color: #000;
+    padding: 20px 30px 10px;
+}
+
+.accordion__container input:hover+label+.accordion__body {
+    height: auto;
+    margin-top: -5px;
+    color: #000;
+    padding: 20px 30px 10px;
+}
+
+.photo {
+    width: 50%;
+}
+
+accordion__container:hover {
+    cursor: pointer;
+}
+
+.accordion__container:hover label:before {
+    display: block;
+    content: '\276F';
+    float: right;
+    cursor: pointer;
+    color: #000000;
+}
+
+.accordion__container:hover label {
+
+    color: #000000;
+}
+
+.accordion__name {
+    border-bottom: 2px solid #3109e6;
+}
+
+.accordion__body {
+    border-bottom: 2px solid #3109e6;
+    cursor: pointer;
+}
