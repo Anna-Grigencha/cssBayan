@@ -58,11 +58,11 @@ body {
 }
 
 .accordion__container input {
-    display: none;
+    visibility: hidden;
 }
 
 .accordion__container label:before {
-    display: block;
+    visibility: visible;
     content: '\276F';
     float: right;
 }
@@ -99,12 +99,12 @@ body {
     width: 50%;
 }
 
-accordion__container:hover {
+.accordion__container:hover {
     cursor: pointer;
 }
 
 .accordion__container:hover label:before {
-    display: block;
+    visibility: visible;
     content: '\276F';
     float: right;
     cursor: pointer;
@@ -125,10 +125,18 @@ accordion__container:hover {
     cursor: pointer;
 }
 
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+
 @media (hover: hover) {
 
     .accordion__container label:before {
-        display: none;
+        visibility: hidden;
         content: '\276F';
         float: right;
     }
