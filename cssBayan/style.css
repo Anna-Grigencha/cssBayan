@@ -1,6 +1,6 @@
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 
 .accordion__container {
     width: 50vw;
-    margin: 0px auto;
+    margin: 0 auto;
 
 }
 
@@ -22,8 +22,7 @@ body {
     margin: 0 auto;
     height: 0;
     color: rgba(0, 0, 0, 0);
-    line-height: 18px;
-    padding: 0 30px;
+    line-height: 1.5em;
     box-sizing: border-box;
     transition: color 2s, padding 2s;
     overflow: hidden;
@@ -37,16 +36,17 @@ body {
 .accordion__container label {
     cursor: pointer;
     display: block;
-    padding: 15px 20px;
+    padding: 1% 2%;
+    padding-bottom: 2%;
     width: 100%;
     color: #3109e6;
     font-weight: 800;
     box-sizing: border-box;
     z-index: 100;
-    font-size: 18px;
+    font-size: 1.2em;
     margin-top: 0;
-    margin-bottom: 5px;
-    transition: color .35s;
+    margin-bottom: 1%;
+    transition: color .5s;
 }
 
 .accordion__container label:hover {
@@ -54,6 +54,10 @@ body {
 }
 
 .accordion__container label:hover .accordion__body {
+    display: block;
+}
+
+.accordion__container input:hover .accordion__body {
     display: block;
 }
 
@@ -72,7 +76,7 @@ body {
 }
 
 .accordion__container input:checked+label:before {
-    transition: transform .35s;
+    transition: transform .5s;
     transform: rotate(90deg);
 }
 
@@ -83,16 +87,22 @@ body {
 
 .accordion__container input:checked+label+.accordion__body {
     height: auto;
-    margin-top: -5px;
+    margin-top: -1%;
     color: #000;
-    padding: 20px 30px 10px;
+    padding: 2%;
 }
 
 .accordion__container input:hover+label+.accordion__body {
     height: auto;
-    margin-top: -5px;
+    margin-top: -1%;
     color: #000;
-    padding: 20px 30px 10px;
+    padding: 2%;
+}
+
+.accordion__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .photo {
@@ -117,11 +127,11 @@ body {
 }
 
 .accordion__name {
-    border-bottom: 2px solid #3109e6;
+    border-bottom: 0.3vh solid #3109e6;
 }
 
 .accordion__body {
-    border-bottom: 2px solid #3109e6;
+    border-bottom: 0.3vh solid #3109e6;
     cursor: pointer;
 }
 
@@ -131,7 +141,6 @@ body {
     outline: 0;
     outline-offset: 0;
 }
-
 
 @media (hover: hover) {
 
@@ -144,8 +153,8 @@ body {
 
 @media screen and (max-width: 820px) {
     .accordion__container {
-        width: calc(100% - 50px);
-        margin: 0px auto;
+        width: 90%;
+        margin: 0 auto;
 
     }
 
@@ -153,18 +162,12 @@ body {
         width: 70%;
     }
 
-    .accordion__container label {
-
-        font-size: 20px;
-
-    }
 }
 
 
 @media screen and (max-width: 320px) {
     .accordion__container {
-        width: calc(100% - 20px);
-        margin: 0px auto;
+        width: 98%;
 
     }
 
@@ -172,9 +175,4 @@ body {
         width: 100%;
     }
 
-    .accordion__container label {
-
-        font-size: 15px;
-
-    }
 }
