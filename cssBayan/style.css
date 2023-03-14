@@ -56,14 +56,12 @@ body {
     transition: color .5s;
 }
 
-
-
 .accordion__container input {
-    visibility: hidden;
+    display: none;
 }
 
 .accordion__container label:before {
-    visibility: visible;
+    display: block;
     content: '\276F';
     float: right;
 }
@@ -114,7 +112,7 @@ body {
 @media (hover: hover) {
 
     .accordion__container label:before {
-        visibility: hidden;
+        display: none;
         content: '\276F';
         float: right;
     }
@@ -149,7 +147,7 @@ body {
     }
 
     .accordion__container:hover label:before {
-        visibility: visible;
+        display: block;
         content: '\276F';
         float: right;
         cursor: pointer;
